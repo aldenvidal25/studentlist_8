@@ -13,7 +13,6 @@
    <input type="text" name="last_name" placeholder="Last Name">
    <input type="text" name="email" placeholder="Email">
    <input type="text" name="age" placeholder="Age">
-
    <button type="submit">Search</button>
 </form>
  

@@ -11,7 +11,24 @@ use Illuminate\Pagination\Paginator;
 
 class StudentController extends Controller
 {
-    
+    public function search(Request $request)
+{
+   $data = User::when($request->first_name, function($query) use ($request) {
+      return $query->where('first_name', 'like', '%'.$request->first_name.'%');
+   })
+   ->when($request->last_name, function($query) use ($request) {
+      return $query->where('last_name', 'like', '%'.$request->last_name.'%');
+   })
+   ->when($request->email, function($query) use ($request) {
+      return $query->where('email', 'like', '%'.$request->email.'%');
+   })
+   ->when($request->age, function($query) use ($request) {
+      return $query->where('age', $request->age);
+   })->get();
+
+   return view('search', compact('data'));
+}
+
     public function index() 
     {
         
