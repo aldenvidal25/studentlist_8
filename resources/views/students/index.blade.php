@@ -8,6 +8,14 @@
       <h1 class="text-4xl font-bold text-white text-center">Student List</h1>
    </a>
 </header>
+<form action="{{route('search')}}" method="GET">
+   <input type="text" name="first_name" placeholder="First Name">
+   <input type="text" name="last_name" placeholder="Last Name">
+   <input type="text" name="email" placeholder="Email">
+   <input type="text" name="age" placeholder="Age">
+
+   <button type="submit">Search</button>
+</form>
  
 <section class="mt-10">
    <div class="overflow-x-auto relative">

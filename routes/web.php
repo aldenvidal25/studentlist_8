@@ -60,3 +60,4 @@ Route::controller(StudentController::class)->group(function () {
    Route::put('/student/{student}', 'update');
    Route::delete('/student/{student}', 'destroy');
 });
+Route::get('search', [UserController::class, 'search'])->name('search');
