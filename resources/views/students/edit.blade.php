@@ -68,9 +68,10 @@
             @enderror
          </div>
 
+         {{-- <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200 mb-2" type="submit">Ok</button> --}}
          <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Update</button>
-         
          </form>
+         
          <form action="" method="POST">
             @method('delete')
             @csrf

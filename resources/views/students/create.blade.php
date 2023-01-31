@@ -66,7 +66,9 @@
             @enderror
          </div>
 
+         {{-- <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Add New</button> --}}
          <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Add New</button>
+         
       </form>
    </section>
 </main>

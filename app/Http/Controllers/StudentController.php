@@ -55,7 +55,8 @@ class StudentController extends Controller
 
        $student->update($validated);
 
-       return back()->with('message', 'Data was successfully updated');
+       return redirect('/')->with('message', 'Data was successfully updated');
+    //    return redirect('/')->with('message', 'account created successfully!');
     }
 
     public function destroy(Students $student) {
