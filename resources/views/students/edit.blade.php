@@ -8,7 +8,7 @@
       <h1 class="text-4xl font-bold text-white text-center"> Edit {{$student->first_name }} {{$student->last_name }}</h1>
    </a>
 </header>
-<main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl">
+<main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl bg-opacity-80">
 
 
    <section class="mt-10">

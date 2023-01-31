@@ -50,7 +50,7 @@ Route::controller(UserController::class)->group(function(){
 });
 
 
-// Route::get('/', [StudentController::class, 'index'])->middleware('auth');
+Route::get('/', [StudentController::class, 'index'])->middleware('auth');
 
 Route::controller(StudentController::class)->group(function(){
    Route::get('/', 'index')->middleware('auth');

@@ -63,7 +63,10 @@ class UserController extends Controller
        $user = User::create($validated);
 
        auth()->login($user);
-        
+
+       return redirect('/')->with('message', 'account created successfully!');
+
+       
     }
 
     public function show($id) {

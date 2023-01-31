@@ -1,10 +1,12 @@
 @include('partials.header')
+<?php $array = array('title' => 'Student System') ;?>
+<x-nav :data="$array"/>
    <header class="max-w-lg mx-auto">
       <a href="#">
-         <h1 class="text-4xl font-bold text-white text-center"> Student Login</h1>
+         <h1 class="mt-10 text-4xl font-bold text-white text-center"> Admin Login</h1>
       </a>
    </header>
-   <main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl">
+   <main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl bg-opacity-80">
       <section>
          <h3 class="font-bold text-2xl text-center">Welcome to Student System</h3>
              <p class="text-gray-600 pt-2">Sign up a new account <a href="/register" class="text-purple-300 font-bold">here</a></p>           
