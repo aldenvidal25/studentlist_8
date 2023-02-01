@@ -45,7 +45,7 @@ class StudentController extends Controller
     public function show_user($id)
     {
         $data3 = User::findOrFail($id);
-        return view('user.edit', ['student' => $data3]);
+        return view('user.edit', ['user' => $data3]);
     }
 
     public function create()
@@ -83,6 +83,7 @@ class StudentController extends Controller
 
         return back()->with('message', 'Data was successfully updated');
     }
+
 
     public function destroy(Students $student)
     {
