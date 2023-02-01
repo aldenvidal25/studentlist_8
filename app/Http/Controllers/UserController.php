@@ -82,9 +82,9 @@ class UserController extends Controller
             ->with('email', 'sp404@kodego.com.ph')
             ->with('id', $id);
     }
-    
+      
     // ricafrente search filter
-    public function search(Request $request)
+   /*  public function search(Request $request)
     {
        $data = User::when($request->first_name, function($query) use ($request) {
           return $query->where('first_name', 'like', '%'.$request->first_name.'%');
@@ -100,7 +100,7 @@ class UserController extends Controller
        })->get();
     
        return view('search', compact('data'));
-    }
+    } */
     // ricafrente search filter
     
 }

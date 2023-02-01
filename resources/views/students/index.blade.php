@@ -8,14 +8,18 @@
       <h1 class="text-4xl font-bold text-white text-center">Student List</h1>
    </a>
 </header>
-<form action="{{route('search')}}" method="GET">
-   <input type="text" name="first_name" placeholder="First Name">
-   <input type="text" name="last_name" placeholder="Last Name">
-   <input type="text" name="email" placeholder="Email">
-   <input type="text" name="age" placeholder="Age">
-   <button type="submit">Search</button>
+ <!-- ricafrente seacrch filter -->
+<div class="flex  justify-center items-center">
+<form class="bg-white p-6 rounded-lg  mx-auto" action="{{route('search')}}" method="GET" >
+   <input type="text" name="first_name" placeholder="Tianna">
+   <input type="text" name="last_name" placeholder="Koelpin">
+   <input type="text" name="email" placeholder="brigitte@.net">
+   <input type="text" name="age" placeholder="24">
+   <button class="bg-sky-600 text-white px-4 py-1 rounded" type="submit">Search</button>
+
 </form>
- 
+</div>
+ <!-- ricafrente seacrch filter -->
 <section class="mt-10">
    <div class="overflow-x-auto relative">
       <table class="w-96 mx-auto text-sm text-left text-gray-500">

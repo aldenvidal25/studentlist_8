@@ -49,7 +49,6 @@ Route::controller(UserController::class)->group(function () {
    Route::post('/store', 'store');
 });
 
-
 // Route::get('/', [StudentController::class, 'index'])->middleware('auth');
 
 Route::controller(StudentController::class)->group(function () {
@@ -59,5 +58,8 @@ Route::controller(StudentController::class)->group(function () {
    Route::get('/student/{id}', 'show');
    Route::put('/student/{student}', 'update');
    Route::delete('/student/{student}', 'destroy');
+   //ricafrente seacrh filter
+Route::get('search', 'search')->name('search');
+//ricafrente seacrh filter
+
 });
-Route::get('search', [UserController::class, 'search'])->name('search');
