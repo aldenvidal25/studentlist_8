@@ -5,16 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\View as FacadesView;
 use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
-    public function index()
-    {
-        return 'Hello from UserController';
-    }
+    // public function index()
+    // {
+    //     return 'Hello from UserController';
+    // }
+
+
+
 
     public function login()
     {
@@ -28,8 +32,15 @@ class UserController extends Controller
 
     public function admin_login()
     {
-        return view('user.admin-login');
+        if (FacadesView::exists('user.admin-login')) {
+            return view('user.admin-login');
+        } else {
+            return abort(404);
+            // return response()->view('errors.404');
+        }
     }
+
+
 
     public function process(Request $request)
     {
@@ -42,6 +53,21 @@ class UserController extends Controller
             $request->session()->regenerate();
 
             return redirect('/')->with('message', 'Welcome back!');
+        }
+        return back()->withErrors(['email' => 'Login failed'])->onlyInput('email');
+    }
+
+    public function admin_process(Request $request)
+    {
+        $validated = $request->validate([
+            "email" => ['required', 'email'],
+            "password" => 'required'
+        ]);
+
+        if (auth()->attempt($validated)) {
+            $request->session()->regenerate();
+
+            return redirect('/admin/dashboard')->with('message', 'Welcome back!');
         }
         return back()->withErrors(['email' => 'Login failed'])->onlyInput('email');
     }

@@ -14,7 +14,7 @@
       </section>
 
       <section class="mt-10">
-         <form action="/login/process" method="POST" class="flex flex-col">
+         <form action="/admin-login/process" method="POST" class="flex flex-col">
             @csrf
             @error('email')
                   <p class="text-red-500 text-xs mt-2">

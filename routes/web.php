@@ -45,12 +45,15 @@ use Illuminate\Http\Request;
 
 Route::controller(UserController::class)->group(function () {
    //get
+
    Route::get('/register', 'register');
-   Route::get('/admin-login', 'admin_login');
+
    Route::get('/login', 'login')->name('login')->middleware('guest');
+   Route::get('/admin-login', 'admin_login')->name('admin_login')->middleware('guest');;
    //post
    Route::post('/users', 'users');
    Route::post('/login/process', 'process');
+   Route::post('/admin-login/process', 'admin_process');
    Route::post('/logout', 'logout');
    Route::post('/store', 'store');
 });
@@ -60,8 +63,11 @@ Route::controller(UserController::class)->group(function () {
 
 Route::controller(StudentController::class)->group(function () {
    //get
+   Route::get('/admin/dashboard', 'admin_dashboard');
    Route::get('/', 'index')->middleware('auth');
+   Route::get('/admin', 'admin_index')->middleware('auth');
    Route::get('/student/{id}', 'show')->middleware('auth');
+   Route::get('/user/{id}', 'show_user')->middleware('auth');
 
    //post
    Route::get('/add/student', 'create')->name('add student'); //Add student

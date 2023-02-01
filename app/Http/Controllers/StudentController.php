@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Students;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -20,10 +21,31 @@ class StudentController extends Controller
         return view('students.index', $data);
     }
 
+    //index for admin only
+    public function admin_index()
+    {
+
+        $data1 = array("students" => DB::table('students')->orderBy('created_at', 'desc')->simplePaginate(10));
+
+        return view('user.index', $data1);
+    }
+
+    public function admin_dashboard()
+    {
+        $data2 = array("users" => DB::table('users')->orderBy('created_at', 'desc')->simplePaginate(10));
+        return view('user.index', $data2);
+    }
+
     public function show($id)
     {
         $data = Students::findOrFail($id);
         return view('students.edit', ['student' => $data]);
+    }
+
+    public function show_user($id)
+    {
+        $data3 = User::findOrFail($id);
+        return view('user.edit', ['student' => $data3]);
     }
 
     public function create()
