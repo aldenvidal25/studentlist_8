@@ -8,6 +8,6 @@
    @vite('resources/css/app.css') 
    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body class="bg-gray-600 min-h-screen pt-12 pb-6 px-2">
+<body class="bg-gray-600 min-h-screen pt-16 pb-6 px-2">
 
    <x-messages />

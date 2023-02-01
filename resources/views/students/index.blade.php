@@ -3,7 +3,7 @@
 <x-nav :data="$array"/>
 
 
-<header class="max-w-lg mx-auto mt-5">
+<header class="max-w-lg mx-auto pt-10">
    <a href="#">
       <h1 class="text-4xl font-bold text-white text-center">Student List</h1>
    </a>

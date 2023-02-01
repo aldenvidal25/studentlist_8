@@ -15,7 +15,7 @@
 
       <form action="/student/{{$student->id}}" method="POST" class="flex flex-col">
          
-         @method('PUT')
+         @method('put')
          @csrf
         
          <div class="mb-6 pt-3 rounded bg-gray-200">

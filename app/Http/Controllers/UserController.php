@@ -26,6 +26,11 @@ class UserController extends Controller
         }
     }
 
+    public function admin_login()
+    {
+        return view('user.admin-login');
+    }
+
     public function process(Request $request)
     {
         $validated = $request->validate([
@@ -67,7 +72,7 @@ class UserController extends Controller
         $validated['password'] = Hash::make($validated['password']);
 
         $user = User::create($validated);
-        auth()->login($user);
+
         return redirect('/')->with('message', 'Account created successfully!');
         // auth()->login($user);
     }
