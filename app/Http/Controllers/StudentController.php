@@ -65,7 +65,7 @@ class StudentController extends Controller
     }
     public function index_destroy(Students $student) {
         $student->delete();
-        return redirect('student.index')->with('message','Data was successfully deleted');
+        return redirect('/')->with('message','Data was successfully deleted');
     }
 
   }

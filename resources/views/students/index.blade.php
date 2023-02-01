@@ -56,7 +56,7 @@
                </td>   
                <td class="py-4 px-6">
                   <form action="" method="POST">
-            @method('index_delete')
+            @method('delete')
             @csrf
                   <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-4 py-1 rounded" type="submit">Delete</button>
                </form>
