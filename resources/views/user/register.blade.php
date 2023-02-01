@@ -4,7 +4,7 @@
 
    <header class="max-w-lg mx-auto py-7">
       <a href="#">
-         <h1 class="text-4xl font-bold text-white text-center"> Student Registration</h1>
+         <h1 class="text-4xl font-bold text-white text-center"> User Registration</h1>
       </a>
    </header>
    <main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl">
