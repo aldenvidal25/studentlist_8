@@ -4,10 +4,10 @@
          <h1 class="text-4xl font-bold text-white text-center"> Student Registration</h1>
       </a>
    </header>
-   <main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl">
+   <main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl bg-opacity-80">
       <section>
          <h3 class="font-bold text-2xl text-center">Welcome to Student System</h3>
-             <p class="text-gray-600 pt-2">Sign in to your account <a href="/login" class="text-purple-300 font-bold">here</a> </p>           
+             <p class="text-gray-600 pt-2">Sign in to your account <a href="/login" class="text-sky-500 font-bold">here</a> </p>           
       </section>
 
       <section class="mt-10">
@@ -50,7 +50,7 @@
                </p>
             @enderror
             </div>
-            <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Sign up</button>
+            <button class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Sign up</button>
          </form>
       </section>
    </main>

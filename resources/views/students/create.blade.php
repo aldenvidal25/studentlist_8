@@ -9,7 +9,7 @@
       <h1 class="text-4xl font-bold text-white text-center"> Add New Student</h1>
    </a>
 </header>
-<main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl">
+<main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl bg-opacity-80">
 
 
    <section class="mt-10">
@@ -67,7 +67,7 @@
          </div>
 
          {{-- <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Add New</button> --}}
-         <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Add New</button>
+         <button type="submit" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Add New</button>
          
       </form>
    </section>

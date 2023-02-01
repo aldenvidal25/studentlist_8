@@ -31,7 +31,7 @@
                   Action
                </th>
                <th scope="col" class="py-3 px-6">
-                  delete
+                  Delete
                </th>
             </tr>
          </thead>
@@ -52,16 +52,20 @@
                   {{ $student-> age }}
                </td>   
                <td class="py-4 px-6">
-                  <a href="/student/{{$student->id}}" class="bg-sky-600 text-white px-4 py-1 rounded">view</a>
-               </td>            
+                  <a href="/student/{{$student->id}}" class="bg-sky-600 hover:bg-sky-900 text-white px-4 py-1 rounded">view</a>
+               </td>   
                <td class="py-4 px-6">
-                  <a href="/student/{{$student->id}}" class="bg-red-600 text-white px-4 py-1 rounded">delete</a>
-               </td>            
+                  <form action="" method="POST">
+            @method('index_delete')
+            @csrf
+                  <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-4 py-1 rounded" type="submit">Delete</button>
+               </form>
+               </td>   
             </tr>
             @endforeach
          </tbody>
       </table>
-      <div class="mx-auto max-w-lg pt-6 p-4 font-bo">
+      <div class="mx-auto max-w-lg pt-6 p-4">
          {{$students->links()}}
       </div>
    </div>
