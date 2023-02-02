@@ -55,11 +55,11 @@
                   <a href="/student/{{$student->id}}" class="bg-sky-600 hover:bg-sky-900 text-white px-4 py-1 rounded">view</a>
                </td>   
                <td class="py-4 px-6">
-                  <form action="" method="POST">
+                  <form action="/student/{{$student->id}}" method="POST">
             @method('delete')
             @csrf
                   <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-4 py-1 rounded" type="submit">Delete</button>
-               </form>
+                  </form>
                </td>   
             </tr>
             @endforeach

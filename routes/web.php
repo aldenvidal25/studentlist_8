@@ -59,7 +59,6 @@ Route::controller(StudentController::class)->group(function(){
    Route::get('/student/{id}', 'show');
    Route::put('/student/{student}', 'update');
    Route::delete('/student/{student}', 'destroy');
-   Route::delete('/', 'index_destroy');
 });
 
 
