@@ -41,7 +41,7 @@ use Illuminate\Http\Request;
 //update - update a data
 //destroy - delete a data
 
-Route::controller(UserController::class)->group(function(){
+Route::controller(UserController::class)->group(function () {
    Route::get('/register', 'register');
    Route::get('/login', 'login')->name('login')->middleware('guest');
    Route::post('/login/process', 'process');
@@ -52,7 +52,7 @@ Route::controller(UserController::class)->group(function(){
 
 Route::get('/', [StudentController::class, 'index'])->middleware('auth');
 
-Route::controller(StudentController::class)->group(function(){
+Route::controller(StudentController::class)->group(function () {
    Route::get('/', 'index')->middleware('auth');
    Route::get('/add/student', 'create')->name('add student'); //Addstudent
    Route::post('/add/student', 'store');
@@ -60,5 +60,3 @@ Route::controller(StudentController::class)->group(function(){
    Route::put('/student/{student}', 'update');
    Route::delete('/student/{student}', 'destroy');
 });
-
-
